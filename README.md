@@ -1,0 +1,2 @@
+# blog_automation
+Githubに上げたIssueを元にブログを書けないかどうかの実験
