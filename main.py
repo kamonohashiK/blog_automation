@@ -7,6 +7,11 @@ from requests.auth import HTTPBasicAuth
 import json
 import datetime
 
+load_dotenv(verbose=True)
+
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
 GITHUB_ID = os.environ.get("GITHUB_ID")
 REPOSITORY_NAME = os.environ.get("REPOSITORY_NAME")
 HATENA_ID = os.environ.get("HATENA_ID")
@@ -41,7 +46,7 @@ def fetchGithub():
 			for c in comments:
 				blog_body += c['body'] + "\n\n"
 
-	postHatena(blog_title, blog_body)
+	#postHatena(blog_title, blog_body)
 
 def postHatena(title, body):
 	date = datetime.datetime.now()
