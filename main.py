@@ -46,7 +46,7 @@ def fetchGithub():
 			for c in comments:
 				blog_body += c['body'] + "\n\n"
 
-	#postHatena(blog_title, blog_body)
+	postHatena(blog_title, blog_body)
 
 def postHatena(title, body):
 	date = datetime.datetime.now()
